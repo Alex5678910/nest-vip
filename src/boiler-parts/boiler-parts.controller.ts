@@ -20,7 +20,7 @@ export class BoilerPartsController {
   constructor(private readonly boilerPartsService: BoilerPartsService) {}
 
   @ApiOkResponse({ type: PaginateAndFilterResponse })
-  @UseGuards(AuthenticatedGuard) // может пользоваться только авторизованный пользователь
+  @UseGuards(AuthenticatedGuard)
   @Get()
   paginateAndFilter(@Query() query) {
     return this.boilerPartsService.paginateAndFilter(query);

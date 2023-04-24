@@ -68,7 +68,7 @@ export class BoilerPartsService {
   ): Promise<{ count: number; rows: BoilerParts[] }> {
     return this.boilerPartsModel.findAndCountAll({
       limit: 20,
-      where: { name: { [Op.like]: `%${str}%` } }, //условия по возвращению в поиске
+      where: { name: { [Op.like]: `%${str}%` } },
     });
   }
 }

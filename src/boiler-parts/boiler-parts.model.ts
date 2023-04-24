@@ -24,7 +24,7 @@ export class BoilerParts extends Model {
   images: string;
 
   @Column({ defaultValue: 0 })
-  in_stock: number; // количество товаров на складе
+  in_stock: number;
 
   @Column({ defaultValue: false })
   bestseller: boolean;
@@ -33,8 +33,8 @@ export class BoilerParts extends Model {
   new: boolean;
 
   @Column
-  popularity: number; // популярность
+  popularity: number;
 
   @Column
-  compatibility: string; // совместимость товаров
+  compatibility: string;
 }
